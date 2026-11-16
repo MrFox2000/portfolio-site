@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ali Ahmadpour — Full-stack engineer, AI systems</title>
+    <meta
+      name="description"
+      content="Full-stack engineer building AI systems: retrieval, agents over MCP, and the multi-tenant SaaS backends they sit on. Python, Django, FastAPI, Next.js, TypeScript."
+    />
+    <meta name="theme-color" content="#080a0f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f8cff'/%3E%3Ctext x='50' y='68' font-size='54' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip" href="#work">Skip to work</a>
+
+    <div class="glow" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark">A</span>
+          <span class="brand-text">Ali Ahmadpour</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-label">Menu</span>
+        </button>
+
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="#work">Work</a>
+          <a href="#stack">Stack</a>
+          <a href="#process">How I work</a>
+          <a class="nav-cta" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero wrap">
+        <p class="eyebrow">Full-stack engineer · AI systems</p>
+        <h1>
+          I build AI products end to end —<br />
+          <span class="accent">retrieval, agents, and the SaaS around them.</span>
+        </h1>
+        <p class="lede">
+          Four working systems, not screenshots: a document assistant that cites pages, an agent
+          that connects news to price moves over the Model Context Protocol, a multi-tenant SaaS
+          backend with metered plans, and the dashboard that runs on it.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn" href="https://github.com/MrFox2000" target="_blank" rel="noreferrer">
+            GitHub profile
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" /></svg>
+          </a>
+        </div>
+
+        <ul class="facts" role="list">
+          <li><strong>4</strong> deployed-ready systems</li>
+          <li><strong>60+</strong> automated tests</li>
+          <li><strong>2</strong> MCP servers &amp; agents</li>
+        </ul>
+      </section>
+
+      <section class="wrap section" id="work">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p>Every card links to a real repository with tests, CI and a README that states its limits.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter projects by technology">
+          <button class="chip is-active" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="ai">AI &amp; agents</button>
+          <button class="chip" type="button" data-filter="backend">Backend</button>
+          <button class="chip" type="button" data-filter="frontend">Frontend</button>
+        </div>
+
+        <div class="projects">
+          <article class="project" data-tags="ai backend frontend">
+            <a class="project-shot" href="https://github.com/MrFox2000/ai-pdf-chat" target="_blank" rel="noreferrer">
+              <img src="assets/ai-pdf-chat.png" alt="AI PDF Chat answering a question with cited pages" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>AI PDF Chat</h3>
+                <span class="badge">RAG</span>
+              </div>
+              <p>
+                Upload a PDF and ask questions. Answers stream token by token and cite the page
+                they came from. Runs with no API key, so anyone can clone and try it.
+              </p>
+              <ul class="stack" role="list">
+                <li>FastAPI</li>
+                <li>LangGraph</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/MrFox2000/ai-pdf-chat" target="_blank" rel="noreferrer">Repository</a>
+                <span class="muted">12 tests · CI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-tags="ai backend frontend">
+            <a class="project-shot" href="https://github.com/MrFox2000/agentic-news-impact" target="_blank" rel="noreferrer">
+              <img src="assets/agentic-news-impact.png" alt="The agent report pairing price moves with headlines" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>News → Price Impact</h3>
+                <span class="badge">MCP</span>
+              </div>
+              <p>
+                An agent that reads the news, checks what the price did next and cites the headlines
+                behind each move. Its tools are a real MCP server any host can mount.
+              </p>
+              <ul class="stack" role="list">
+                <li>LangGraph</li>
+                <li>MCP</li>
+                <li>FastAPI</li>
+                <li>Next.js</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/MrFox2000/agentic-news-impact" target="_blank" rel="noreferrer">Repository</a>
+                <span class="muted">26 tests · CI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-tags="backend">
+            <a class="project-shot" href="https://github.com/MrFox2000/django-saas-starter" target="_blank" rel="noreferrer">
+              <img src="assets/django-saas-starter.png" alt="Generated OpenAPI documentation for the SaaS API" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>Django SaaS Starter</h3>
+                <span class="badge">Multi-tenant</span>
+              </div>
+              <p>
+                Organisations, roles, plans and metered quotas. The active tenant lives inside the
+                JWT, so a client cannot reach another organisation by editing a URL.
+              </p>
+              <ul class="stack" role="list">
+                <li>Django 6</li>
+                <li>DRF</li>
+                <li>JWT</li>
+                <li>Stripe</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/MrFox2000/django-saas-starter" target="_blank" rel="noreferrer">Repository</a>
+                <span class="muted">29 tests · CI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-tags="frontend backend">
+            <a class="project-shot" href="https://github.com/MrFox2000/next-dashboard" target="_blank" rel="noreferrer">
+              <img src="assets/next-dashboard.png" alt="The multi-tenant dashboard showing quota and plans" loading="lazy" />
+            </a>
+            <div class="project-body">
+              <div class="project-title-row">
+                <h3>SaaS Dashboard</h3>
+                <span class="badge">TypeScript</span>
+              </div>
+              <p>
+                The client for the API above: role-aware controls, a quota meter, and a metered
+                action whose <code>402</code> response becomes an upgrade prompt instead of an error.
+              </p>
+              <ul class="stack" role="list">
+                <li>Next.js 16</li>
+                <li>React</li>
+                <li>Tailwind</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/MrFox2000/next-dashboard" target="_blank" rel="noreferrer">Repository</a>
+                <span class="muted">Strict TS · CI</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="wrap section" id="stack">
+        <div class="section-head">
+          <h2>What I actually work with</h2>
+          <p>Listed only where a repository above proves it.</p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h3>AI systems</h3>
+            <ul role="list">
+              <li>Retrieval-augmented generation</li>
+              <li>LangChain &amp; LangGraph</li>
+              <li>Model Context Protocol (servers and clients)</li>
+              <li>Streaming responses over SSE</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h3>Backend</h3>
+            <ul role="list">
+              <li>Python, FastAPI, Django + DRF</li>
+              <li>PostgreSQL, JWT, multi-tenancy</li>
+              <li>Stripe subscriptions and webhooks</li>
+              <li>pytest, Docker, GitHub Actions</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h3>Frontend</h3>
+            <ul role="list">
+              <li>TypeScript, React, Next.js App Router</li>
+              <li>Tailwind, accessible markup</li>
+              <li>Hand-written HTML, CSS and DOM</li>
+              <li>This page: no framework, no build step</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="process">
+        <div class="section-head">
+          <h2>How I work</h2>
+        </div>
+
+        <ol class="steps" role="list">
+          <li>
+            <span class="step-number">01</span>
+            <h3>Understand the job, not the ticket</h3>
+            <p>One call to agree what "done" means, and what is explicitly out of scope.</p>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <h3>Build the smallest working slice</h3>
+            <p>End to end and runnable first. Features come after the path works.</p>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <h3>Test the parts that can break quietly</h3>
+            <p>Auth, tenancy, quotas, parsing. Anything else is decoration.</p>
+          </li>
+          <li>
+            <span class="step-number">04</span>
+            <h3>Hand over something you can run</h3>
+            <p>README with a quickstart, a demo account, and limitations written down.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="wrap section contact" id="contact">
+        <div class="contact-card">
+          <h2>Need something built?</h2>
+          <p>
+            I take on small, well-defined builds: an AI feature on top of your data, a SaaS
+            backend, or fixing the multi-tenant parts of one you already have.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:aliized1379@gmail.com">aliized1379@gmail.com</a>
+            <a class="btn" href="https://github.com/MrFox2000" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year">2026</span> Ali Ahmadpour</p>
+        <p class="muted">Hand-written HTML, CSS and JavaScript — no framework, no build step.</p>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
