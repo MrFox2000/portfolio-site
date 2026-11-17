@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        margin: 0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1024px;
+        height: 1024px;
+        overflow: hidden;
+        background: #07070e;
+      }
+
+      .stage {
+        position: relative;
+        width: 1024px;
+        height: 1024px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(760px 760px at 24% 12%, rgba(126, 90, 255, 0.45), transparent 62%),
+          radial-gradient(700px 700px at 82% 86%, rgba(34, 211, 238, 0.34), transparent 62%),
+          radial-gradient(520px 520px at 78% 10%, rgba(255, 96, 200, 0.2), transparent 60%),
+          #07070e;
+      }
+
+      .grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+        background-size: 64px 64px;
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 18%, transparent 70%);
+        mask-image: radial-gradient(circle at 50% 50%, #000 18%, transparent 70%);
+      }
+
+      .ring {
+        position: absolute;
+        width: 648px;
+        height: 648px;
+        border-radius: 50%;
+        border: 2px solid rgba(167, 139, 250, 0.32);
+        box-shadow:
+          0 0 70px rgba(124, 92, 255, 0.28) inset,
+          0 0 40px rgba(124, 92, 255, 0.22);
+      }
+
+      .mark {
+        font-family: "Fredoka", "Segoe UI", system-ui, sans-serif;
+        font-weight: 600;
+        font-size: 560px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        background: linear-gradient(148deg, #ddd6fe 0%, #a78bfa 34%, #7c5cff 62%, #22d3ee 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transform: translateY(-14px);
+        filter: drop-shadow(0 0 48px rgba(124, 92, 255, 0.5))
+          drop-shadow(0 0 110px rgba(34, 211, 238, 0.28));
+      }
+
+      /* soft highlight so the letter looks lit from the top-left */
+      .mark::before {
+        content: "";
+        position: absolute;
+      }
+
+      .sparkle {
+        position: absolute;
+        top: 196px;
+        right: 224px;
+        width: 50px;
+        height: 50px;
+        background: #f5b8ff;
+        clip-path: polygon(
+          50% 0%,
+          61% 39%,
+          100% 50%,
+          61% 61%,
+          50% 100%,
+          39% 61%,
+          0% 50%,
+          39% 39%
+        );
+        filter: drop-shadow(0 0 24px rgba(245, 184, 255, 0.9));
+      }
+
+      .sparkle.small {
+        top: 286px;
+        right: 296px;
+        width: 24px;
+        height: 24px;
+        opacity: 0.72;
+      }
+
+      .sparkle.tiny {
+        top: 424px;
+        left: 214px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.5;
+      }
+
+      .vignette {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 48%, transparent 44%, rgba(4, 4, 10, 0.6) 100%);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="grid"></div>
+      <div class="ring"></div>
+      <div class="mark">A</div>
+      <div class="sparkle"></div>
+      <div class="sparkle small"></div>
+      <div class="sparkle tiny"></div>
+      <div class="vignette"></div>
+    </div>
+  </body>
+</html>
