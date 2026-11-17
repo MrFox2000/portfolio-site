@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ali Ahmadpour — Résumé</title>
+    <style>
+      :root {
+        --ink: #12141c;
+        --muted: #5b6070;
+        --rule: #dfe2ea;
+        --accent: #3b3fbf;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #eef0f5;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+          sans-serif;
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 15mm 16mm 13mm;
+        background: #fff;
+      }
+
+      /* ---------- header ---------- */
+      header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10mm;
+        padding-bottom: 5mm;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.05;
+        letter-spacing: -0.4px;
+      }
+
+      .role {
+        margin: 2.5mm 0 0;
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .contact {
+        text-align: right;
+        font-size: 9.6px;
+        line-height: 1.75;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .contact a {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      /* ---------- shared ---------- */
+      section {
+        margin-top: 7mm;
+      }
+
+      h2 {
+        margin: 0 0 3mm;
+        font-size: 9.4px;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h2 span {
+        display: inline-block;
+        padding-bottom: 1.4mm;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .summary {
+        margin: 0;
+        font-size: 10.9px;
+        line-height: 1.68;
+      }
+
+      .summary strong {
+        font-weight: 650;
+      }
+
+      /* ---------- projects ---------- */
+      .project {
+        padding: 3.1mm 0 3.3mm;
+        border-bottom: 1px solid var(--rule);
+        break-inside: avoid;
+      }
+
+      .project:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .project-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 6mm;
+      }
+
+      .project h3 {
+        margin: 0;
+        font-size: 11.6px;
+        letter-spacing: -0.1px;
+      }
+
+      .project h3 em {
+        font-style: normal;
+        font-weight: 500;
+        color: var(--muted);
+      }
+
+      .stack {
+        font-size: 8.9px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .project p {
+        margin: 1.3mm 0 0;
+        font-size: 10.4px;
+        line-height: 1.6;
+      }
+
+      .project p code {
+        font-family: "SFMono-Regular", Consolas, monospace;
+        font-size: 9px;
+        background: #f2f3f8;
+        padding: 0 1mm;
+        border-radius: 1mm;
+      }
+
+      .links {
+        margin-top: 1.2mm;
+        font-size: 9.1px;
+        color: var(--muted);
+      }
+
+      .links a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .links .sep {
+        margin: 0 1.6mm;
+        color: var(--rule);
+      }
+
+      /* ---------- how I work ---------- */
+      .howto {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 10.4px;
+        line-height: 1.62;
+      }
+
+      .howto li {
+        position: relative;
+        padding-left: 4.5mm;
+        margin-bottom: 1.6mm;
+        break-inside: avoid;
+      }
+
+      .howto li:last-child {
+        margin-bottom: 0;
+      }
+
+      .howto li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1.55mm;
+        width: 1.6mm;
+        height: 1.6mm;
+        border-radius: 50%;
+        background: var(--accent);
+        opacity: 0.75;
+      }
+
+      .howto strong {
+        font-weight: 650;
+      }
+
+      /* ---------- skills ---------- */
+      .skills {
+        display: grid;
+        grid-template-columns: 32mm 1fr;
+        row-gap: 1.8mm;
+        column-gap: 3mm;
+        font-size: 10.4px;
+        line-height: 1.5;
+      }
+
+      .skills dt {
+        font-weight: 650;
+        color: var(--ink);
+      }
+
+      .skills dd {
+        margin: 0;
+        color: #33384a;
+      }
+
+      /* ---------- footer note ---------- */
+      .note {
+        margin-top: 5mm;
+        padding-top: 2.5mm;
+        border-top: 1px solid var(--rule);
+        font-size: 8.6px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        html,
+        body {
+          background: #fff;
+        }
+
+        .page {
+          width: auto;
+          min-height: 0;
+          padding: 13mm 15mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div>
+          <h1>Ali Ahmadpour</h1>
+          <p class="role">Full-stack engineer · AI systems</p>
+        </div>
+        <div class="contact">
+          <a href="mailto:aliahmadpour2000ir@gmail.com">aliahmadpour2000ir@gmail.com</a><br />
+          <a href="https://github.com/MrFox2000">github.com/MrFox2000</a><br />
+          <a href="https://mrfox2000.github.io/portfolio-site/">portfolio-site</a>
+        </div>
+      </header>
+
+      <section>
+        <h2><span>Profile</span></h2>
+        <p class="summary">
+          Engineer who builds AI products end to end: retrieval pipelines, agent orchestration over
+          the Model Context Protocol, and the multi-tenant SaaS that sits behind them. Four systems
+          are deployed and running in production with <strong>67 automated tests</strong> and CI on
+          every repository — a working demo and a readable repository for each.
+        </p>
+      </section>
+
+      <section>
+        <h2><span>Selected work</span></h2>
+
+        <div class="project">
+          <div class="project-head">
+            <h3>AI PDF Chat <em>— retrieval over your own documents</em></h3>
+            <span class="stack">FastAPI · LangGraph · Next.js</span>
+          </div>
+          <p>
+            Upload a PDF, ask a question, get an answer that streams token by token and cites the
+            page it came from. Retrieval runs as a LangGraph pipeline; the service boots with no API
+            key, so the demo is reproducible from a fresh clone. Deployed on Render and Vercel.
+          </p>
+          <p class="links">
+            <a href="https://ai-pdf-chat-two.vercel.app/">Live</a>
+            <span class="sep">·</span>
+            <a href="https://github.com/MrFox2000/ai-pdf-chat">github.com/MrFox2000/ai-pdf-chat</a>
+            <span class="sep">·</span> 12 tests
+          </p>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <h3>News → Price Impact <em>— an MCP agent</em></h3>
+            <span class="stack">LangGraph · MCP · FastAPI · Next.js</span>
+          </div>
+          <p>
+            Four tools — news search, price history, large-move detection and correlation — are
+            served by a real MCP server. The agent plans, calls them over the protocol, and writes a
+            report that pairs every large move with the headlines published in the days before it.
+            The browser streams the agent's trace while it works.
+          </p>
+          <p class="links">
+            <a href="https://agentic-news-impact.vercel.app/">Live</a>
+            <span class="sep">·</span>
+            <a href="https://github.com/MrFox2000/agentic-news-impact"
+              >github.com/MrFox2000/agentic-news-impact</a
+            >
+            <span class="sep">·</span> 26 tests
+          </p>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <h3>Django SaaS Starter <em>— multi-tenant API</em></h3>
+            <span class="stack">Django 6 · DRF · JWT · Stripe</span>
+          </div>
+          <p>
+            Organisations, roles, plans and metered quotas. The active tenant travels inside the
+            signed JWT, so a client cannot reach another organisation by editing a URL, and
+            exhausting a plan returns <code>402</code> rather than a generic error. Complete OpenAPI
+            schema, Docker image, Postgres.
+          </p>
+          <p class="links">
+            <a href="https://django-saas-api.onrender.com/api/docs/">Live API docs</a>
+            <span class="sep">·</span>
+            <a href="https://github.com/MrFox2000/django-saas-starter"
+              >github.com/MrFox2000/django-saas-starter</a
+            >
+            <span class="sep">·</span> 29 tests
+          </p>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <h3>SaaS Dashboard <em>— the client for that API</em></h3>
+            <span class="stack">Next.js 16 · TypeScript · Tailwind 4</span>
+          </div>
+          <p>
+            Role-aware controls, a live quota meter and a metered action whose <code>402</code>
+            response becomes an upgrade prompt instead of a dead end. Strict TypeScript, no mocked
+            data — every number on the page comes from the API.
+          </p>
+          <p class="links">
+            <a href="https://next-dashboard-phi-azure.vercel.app/">Live</a>
+            <span class="sep">·</span>
+            <a href="https://github.com/MrFox2000/next-dashboard"
+              >github.com/MrFox2000/next-dashboard</a
+            >
+            <span class="sep">·</span> strict TS · CI
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2><span>How I work</span></h2>
+        <ul class="howto">
+          <li>
+            <strong>Ship a working slice before widening scope.</strong> Everything in the list above
+            is clickable today, not a branch that might one day be finished.
+          </li>
+          <li>
+            <strong>Test what fails quietly.</strong> Tenant boundaries, quota edges, citation
+            accuracy — the bugs a demo hides and a customer finds.
+          </li>
+          <li>
+            <strong>Hand over something runnable.</strong> Each repository states its limits in the
+            README and starts with one command.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span>Technical skills</span></h2>
+        <dl class="skills">
+          <dt>AI &amp; agents</dt>
+          <dd>LangGraph · LangChain · RAG &amp; retrieval · Model Context Protocol · OpenAI API</dd>
+          <dt>Backend</dt>
+          <dd>
+            Python · FastAPI · Django · DRF · PostgreSQL · JWT &amp; multi-tenancy · REST ·
+            OpenAPI/Swagger · Docker
+          </dd>
+          <dt>Frontend</dt>
+          <dd>TypeScript · React · Next.js · Tailwind CSS · HTML · CSS · DOM</dd>
+          <dt>Practice</dt>
+          <dd>pytest · GitHub Actions CI · Render · Vercel · Neon · Git</dd>
+        </dl>
+      </section>
+
+      <p class="note">
+        Every claim above is checkable: each project links to a running deployment and to a public
+        repository with its test suite.
+      </p>
+    </div>
+  </body>
+</html>
